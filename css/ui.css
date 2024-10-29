@@ -20,14 +20,14 @@ body {
 }
 .transfer-option {
     text-align: center;
-    margin: 10px;
+    margin: 5px;
 }
 .transfer-icon {
     background-color: #fff;
     font-size: 45px;
     border-radius: 20px;
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;

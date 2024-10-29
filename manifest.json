@@ -1,0 +1,127 @@
+{
+  "name": "UPIEX",
+  "short_name": "UPIEX",
+  "description": "India's Fastest Payment App",
+  "start_url": "https://upiex.netlify.app/",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#F8F9FA",
+  "icons": [
+    {
+      "src": "img/appicon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/appicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "splash_screen": {
+    "src": "img/appicon.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "maskable"
+  },
+  "id": "/",
+  "orientation": "portrait",
+  
+  "display_override": [
+    "standalone",
+    "fullscreen",
+    "window-controls-overlay"
+  ],
+  "categories": [
+    "payment",
+    "UPI",
+    "Money",
+    "lifestyle"
+  ],
+  "dir": "ltr",
+  "lang": "en",
+  "scope": "/",
+  "launch_handler": {},
+  "handle_links": {
+    "scope": "/",
+    "urls": [
+      "/",
+      "/index.html"
+    ]
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+upiex",
+      "url": "/?url=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "name",
+      "text": "description",
+      "url": "link",
+      "files": [
+        {
+          "name": "",
+          "accept": []
+        }
+      ]
+    }
+  },
+  "background_sync": true,
+  "periodic_sync": {
+    "min_interval": 86400
+  },
+  "prefer_related_applications": false,
+  "version": "1.13.2.9.11.1",
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "file_handlers": [
+    {
+      "action": "/open-report",
+      "accept": {
+        "application/pdf": [
+          ".pdf"
+        ],
+        "text/csv": [
+          ".csv"
+        ]
+      }
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scan and Pay",
+      "url": "https://upiex.netlify.app/scan",
+      "icons": [
+        {
+          "src": "img/qr.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "url": "https://upiex.netlify.app/history",
+      "icons": [
+        {
+          "src": "img/history.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "gcm_sender_id": "850234327014",
+  "scope_extensions": [
+    {
+      "origin": "https://upiex.netlify.app/"
+    }
+  ]
+}

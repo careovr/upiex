@@ -1,0 +1,126 @@
+body {
+    background-color: #f8f9fa;
+}
+.header {
+    background-color: #5d2e8c;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    height: 45px;
+}
+.transfer-section {
+    background-color: #4169e1;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+}
+.transfer-option {
+    text-align: center;
+    margin: 10px;
+}
+.transfer-icon {
+    background-color: #fff;
+    font-size: 45px;
+    border-radius: 20px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px;
+    color: #4169e1;
+}
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.contact {
+    text-align: center;
+}
+.contact-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin-bottom: 5px;
+}
+.wallet-section {
+    background-color: #4169e1;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+}
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #5d2e8c;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    border-radius: 20px 20px 0px 0px;
+}
+.nav-item {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.qr-button {
+    background-color: #5d2e8c;
+    border: 5px white solid;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -45px;
+}
+.qr-icon {
+    width: 30px;
+    height: 30px;
+}
+.sand-again-section {
+    background-color: #4169e1;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+}
+.sand-again-slider {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.sand-again-slider::-webkit-scrollbar {
+    display: none;
+}
+.sand-again-item {
+    flex: 0 0 auto;
+    width: 100px;
+    text-align: center;
+    text-align: center;
+    margin-right: 10px;
+}
+.sand-again-img {
+    color: #fff;
+    font-size: 50px;
+}
+.contact-name{
+    color: #fff;
+    font-weight: bold;
+}
+.section-title{
+    color: #fff;
+    font-weight: bolder;
+}
+.wallet-balance{
+    font-size: 40px;
+}

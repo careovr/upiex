@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPiEX App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+    <div class="header">
+        <img src="img/logo.png" alt="UPiEX Logo" class="header-logo">
+        <div class="d-flex align-items-center">
+            <a href="scan.html"><div class="me-3"><img height="45px" src="img/qr.png" alt=""></i></div></a>
+            <div class="me-3"><img height="45px" src="img/user-white.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="transfer-section">
+        <h6 class="section-title">Transfer Money</h6>
+        <div class="row">
+            <div class="col-3">
+                <a href="#" class="text-decoration-none text-white">
+                    <div class="transfer-option">
+                        <div class="transfer-icon"><img height="50px" src="img/upi.png" alt=""></div>
+                        <small>UPI Transfer</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="text-decoration-none text-white">
+                    <div class="transfer-option">
+                        <div class="transfer-icon"><img height="50px" src="img/bank.png" alt=""></div>
+                        <small>Bank Transfer</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="text-decoration-none text-white">
+                    <div class="transfer-option">
+                        <div class="transfer-icon"><img height="50px" src="img/self-transfer.png" alt=""></div>
+                        <small>Self Transfer</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="text-decoration-none text-white">
+                    <div class="transfer-option">
+                        <div class="transfer-icon"><img height="50px" src="img/inr.png" alt=""></div>
+                        <small>Check Balance</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="wallet-section">
+        <h6 class="section-title">Wallet</h6>
+        
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <img src="img/upi.png" height="45px" alt=""><p class="mb-0">1234567890@upiex</p>
+                <h4 class="wallet-balance">₹1132.00</h4>
+                <small>Balance Left</small>
+            </div>
+            <div>
+                <img src="img/gift.png" alt="Gift"">
+            </div>
+        </div>
+    </div>
+
+    <div class="sand-again-section">
+        <h6 class="section-title">Sand Again</h6>
+        <div class="sand-again-slider">
+            <div class="sand-again-slider" id="sandAgainSlider">
+                <!-- Contact items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <img height="30px" src="img/home.png" alt="">
+            <div>Home</div>
+        </a>
+        <a href="scan.html"><div class="qr-button">
+            <img src="img/qr.png" alt="QR" class="qr-icon">
+        </div></a>
+        <a href="history.html" class="nav-item">
+            <img height="30px" src="img/history.png" alt="">
+             <div>History`
+             </div>
+        </a>
+    </div>
+    <script>
+        function loadSavedContacts() {
+            const savedContacts = JSON.parse(localStorage.getItem('savedContacts')) || [];
+            const sandAgainSlider = document.getElementById('sandAgainSlider');
+            sandAgainSlider.innerHTML = '';
+
+            savedContacts.forEach((contact, index) => {
+                const contactItem = document.createElement('div');
+                contactItem.classList.add('sand-again-item');
+                contactItem.setAttribute('onclick', `openPaymentPage(${index})`);
+
+                contactItem.innerHTML = `
+                    <center>
+                        <div class="sand-again-img"><img height="50px" src="img/user-white.png" alt=""></div>
+                        <small class="contact-name">${contact.name}</small>
+                    </center>
+                `;
+
+                sandAgainSlider.appendChild(contactItem);
+            });
+        }
+
+        function openPaymentPage(index) {
+            const savedContacts = JSON.parse(localStorage.getItem('savedContacts')) || [];
+            if (savedContacts[index]) {
+                window.location.href = `payment.html?name=${encodeURIComponent(savedContacts[index].name)}&upiId=${encodeURIComponent(savedContacts[index].upiId)}`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSavedContacts();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
